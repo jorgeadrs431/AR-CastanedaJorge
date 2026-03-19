@@ -1,0 +1,27 @@
+{
+  "version": "2.6.0",
+  "summary": {
+    "title": "Modelo de amenazas - Servidor Web E commerce",
+    "owner": "Jorge Castañeda",
+    "description": "El sistema corresponde a una tienda online (e-commerce) donde los usuarios acceden a través de un navegador web para consultar productos, autenticarse, realizar compras y gestionar pedidos.\n\nEl servidor web actúa como punto de entrada principal, procesando solicitudes HTTP/HTTPS, gestionando sesiones de usuario y comunicándose con servicios backend como APIs y bases de datos.\n\nEl sistema también se integra con servicios externos como pasarelas de pago para procesar transacciones. Debido a la exposición a la información, el servidor web es un componente crítico que debe garantizar la confidencialidad, integridad y disponibilidad de la información.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "Modelo de amenazas - Servidor Web E commerce",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.6.0",
+        "cells": [],
+        "description": "Este diagrama representa la arquitectura del servidor web de una tienda online, incluyendo actores, flujos de datos y sistemas externos. Se utilizará para identificar amenazas de seguridad bajo el modelo STRIDE, enfocándose en los riesgos asociados a la interacción entre usuarios, servidor web y servicios backend."
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "Alto",
+    "threatTop": 0
+  }
+}
