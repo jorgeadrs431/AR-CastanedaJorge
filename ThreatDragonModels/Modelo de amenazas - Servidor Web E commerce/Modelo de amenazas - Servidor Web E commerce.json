@@ -12,9 +12,9 @@
       {
         "id": 0,
         "title": "Modelo de amenazas - Servidor Web E commerce",
-        "diagramType": "STRIDE",
-        "placeholder": "New STRIDE diagram description",
-        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "diagramType": "Genérico",
+        "placeholder": "Descripción de nuevo diagrama genérico",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
         "version": "2.6.0",
         "cells": [],
         "description": "Este diagrama representa la arquitectura del servidor web de una tienda online, incluyendo actores, flujos de datos y sistemas externos. Se utilizará para identificar amenazas de seguridad bajo el modelo STRIDE, enfocándose en los riesgos asociados a la interacción entre usuarios, servidor web y servicios backend."
