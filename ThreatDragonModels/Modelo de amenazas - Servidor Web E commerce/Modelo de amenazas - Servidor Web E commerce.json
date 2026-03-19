@@ -20,7 +20,7 @@
         "description": "Este diagrama representa la arquitectura del servidor web de una tienda online, incluyendo actores, flujos de datos y sistemas externos. Se utilizará para identificar amenazas de seguridad bajo el modelo STRIDE, enfocándose en los riesgos asociados a la interacción entre usuarios, servidor web y servicios backend."
       }
     ],
-    "diagramTop": 1,
+    "diagramTop": 2,
     "reviewer": "Alto",
     "threatTop": 0
   }
