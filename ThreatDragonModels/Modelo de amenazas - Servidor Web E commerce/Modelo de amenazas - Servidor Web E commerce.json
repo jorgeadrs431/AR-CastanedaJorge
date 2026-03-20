@@ -45,53 +45,6 @@
             }
           },
           {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              ""
-            ],
-            "id": "7dd73dce-a449-41b7-adb0-f34d8f225a87",
-            "source": {
-              "x": 850,
-              "y": 570
-            },
-            "target": {
-              "x": 950,
-              "y": 570
-            },
-            "vertices": []
-          },
-          {
             "position": {
               "x": 880,
               "y": 200
@@ -1161,7 +1114,7 @@
           },
           {
             "position": {
-              "x": 1188,
+              "x": 1212,
               "y": 610
             },
             "size": {
@@ -1307,7 +1260,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1327,12 +1281,39 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "3f4e5e18-ca49-47c2-a5be-0ed87fbaf4c6",
+                  "title": "Manipulación Precios",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering / Manipulación",
+                  "description": "Usuario niega Checkout",
+                  "mitigation": "Marcas de tiempo de los registros de auditoría",
+                  "modelType": "Genérico",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                },
+                {
+                  "id": "275a49c1-c560-4d86-ad73-91ca8e49cfde",
+                  "title": "Manipulación de Precios - Tampering",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "--- STRIDE ---",
+                  "description": "Atacante modifica parámetros POST Carrito (precios, cantidades) antes de que lleguen \nal servidor, alterando el costo total de compra.\n",
+                  "mitigation": "Mitigaciones:\n- Validación servidor-side de todos parámetros\n- Cálculo de precios en backend (no confiar en cliente)\n- Hash de integridad en carrito",
+                  "modelType": "Genérico",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ],
               "trustBoundaryIds": []
             },
             "labels": [
@@ -1467,68 +1448,6 @@
               "hasOpenThreats": false
             },
             "zIndex": 40
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "a7d32099-c025-4734-8e79-7456bd7efc8c",
-                  "title": "Suplantación de Identidad - Cookie Theft",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Spoofing / Spoofing",
-                  "description": "Un atacante intercepta la cookie de sesión del usuario legítimo durante la navegación \nHTTPS Login, permitiendo suplantar su identidad y acceder a su carrito y datos personales.",
-                  "mitigation": "- Implementar HttpOnly y Secure flags en cookies\n- Usar Token JWT con firma digital\n- HSTS (HTTP Strict Transport Security)",
-                  "modelType": "Genérico",
-                  "new": false,
-                  "number": 2,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              ""
-            ],
-            "id": "8cbdb1c7-3acf-407e-84a1-ff1868d13e3d",
-            "source": {
-              "x": 1122,
-              "y": 582
-            },
-            "target": {
-              "x": 1222,
-              "y": 582
-            },
-            "vertices": [],
-            "zIndex": 41
           },
           {
             "shape": "flow",
@@ -1700,7 +1619,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1720,12 +1640,26 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "8612e76c-b835-4b28-84e1-bbbff44cb0f5",
+                  "title": "Repudiation - Sin Logs",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Repudiation / Repudiación",
+                  "description": "Usuario niega checkout realizado porque no hay logs con timestamps \nni auditoría de transacciones.",
+                  "mitigation": "Logs con timestamps no modificables\n• Firma digital transacciones\n• Audit trail completo",
+                  "modelType": "Genérico",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
               "trustBoundaryIds": []
             },
             "labels": [
@@ -1836,6 +1770,115 @@
             },
             "vertices": [],
             "zIndex": 50
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "d1ec22af-7c1f-41ce-a8f1-e69d37f8c1bb",
+                  "title": "Suplantación de Identidad - Cookie Theft",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "--- STRIDE ---",
+                  "description": "Un atacante intercepta la cookie de sesión del usuario legítimo durante la navegación \nHTTPS Login, permitiendo suplantar su identidad y acceder a su carrito y datos personales.",
+                  "mitigation": "- Implementar HttpOnly y Secure flags en cookies\n- Usar Token JWT con firma digital\n- HSTS (HTTP Strict Transport Security)",
+                  "modelType": "Genérico",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "e9d66b43-d994-47c0-a4fa-35674acb42ed",
+            "source": {
+              "x": 854,
+              "y": 574
+            },
+            "target": {
+              "x": 954,
+              "y": 574
+            },
+            "vertices": [],
+            "zIndex": 51
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "86946d67-2e9d-4908-b56e-92266bd8c7f7",
+            "source": {
+              "x": 1126,
+              "y": 566
+            },
+            "target": {
+              "x": 1226,
+              "y": 566
+            },
+            "vertices": [],
+            "zIndex": 52
           }
         ],
         "description": "Este diagrama representa la arquitectura del servidor web de una tienda online, incluyendo actores, flujos de datos y sistemas externos. Se utilizará para identificar amenazas de seguridad bajo el modelo STRIDE, enfocándose en los riesgos asociados a la interacción entre usuarios, servidor web y servicios backend."
@@ -1843,6 +1886,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Alto",
-    "threatTop": 2
+    "threatTop": 6
   }
 }
