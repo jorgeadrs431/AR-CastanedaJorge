@@ -1472,7 +1472,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1492,12 +1493,26 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "a7d32099-c025-4734-8e79-7456bd7efc8c",
+                  "title": "Suplantación de Identidad - Cookie Theft",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Un atacante intercepta la cookie de sesión del usuario legítimo durante la navegación \nHTTPS Login, permitiendo suplantar su identidad y acceder a su carrito y datos personales.",
+                  "mitigation": "- Implementar HttpOnly y Secure flags en cookies\n- Usar Token JWT con firma digital\n- HSTS (HTTP Strict Transport Security)",
+                  "modelType": "Genérico",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              ],
               "trustBoundaryIds": []
             },
             "labels": [
@@ -1828,6 +1843,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Alto",
-    "threatTop": 1
+    "threatTop": 2
   }
 }
