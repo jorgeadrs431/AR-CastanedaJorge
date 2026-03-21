@@ -114,7 +114,12 @@
               "cell": "fe05e297-ed97-446f-8a05-c0557c481693",
               "port": "f1f21f6c-8308-49d4-9b58-06db99ed1cab"
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 960,
+                "y": 410
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -136,7 +141,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Sercvices",
+              "name": "Checkout",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -150,7 +155,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Sercvices"
+              "Checkout"
             ],
             "id": "dc8226a9-2474-4779-9143-fc284280f851",
             "source": {
@@ -270,53 +275,6 @@
                 "y": 540
               }
             ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              ""
-            ],
-            "id": "cbf5cc85-74f3-4fc1-ae76-4e0281ee861b",
-            "source": {
-              "cell": "b165b0b3-26a6-40dd-83f5-ba26b0a89f36",
-              "port": "b8a05a14-1e6f-4aed-b003-bc3298c3673f"
-            },
-            "target": {
-              "cell": "81f8e3f8-7681-46c4-a2f2-e49c3f9f7775",
-              "port": "0d5dd37b-a4a5-4119-8121-1dde69eca1d4"
-            },
-            "vertices": []
           },
           {
             "shape": "flow",
@@ -525,53 +483,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Credenciales",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Credenciales"
-            ],
-            "id": "eea864cd-aaab-44ca-8ac2-c6e23816bb92",
-            "source": {
-              "cell": "81f8e3f8-7681-46c4-a2f2-e49c3f9f7775",
-              "port": "5ed2ae72-f274-4394-b2ec-f493602bd1af"
-            },
-            "target": {
-              "cell": "05ab572e-14ee-4045-a620-91ac9d36b386",
-              "port": "640923fe-385a-499d-82e4-929b3770ad0d"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Data Flow",
               "description": "",
               "outOfScope": false,
@@ -599,6 +510,122 @@
             },
             "vertices": [],
             "parent": "ffd3a6c6-c4c0-4313-92f7-4ddf40ec9e17"
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Requerimiento \nde base de datos\nde transaccion",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Requerimiento \nde base de datos\nde transaccion"
+            ],
+            "id": "039c937c-a32c-4826-b9e1-0cc069e49aa2",
+            "source": {
+              "x": 1630,
+              "y": 300
+            },
+            "target": {
+              "cell": "b165b0b3-26a6-40dd-83f5-ba26b0a89f36",
+              "port": "b8a05a14-1e6f-4aed-b003-bc3298c3673f"
+            },
+            "vertices": [
+              {
+                "x": 1460,
+                "y": 450
+              },
+              {
+                "x": 1450,
+                "y": 470
+              },
+              {
+                "x": 1390,
+                "y": 515
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Requerimiento \nde base de datos\nde transaccion",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Requerimiento \nde base de datos\nde transaccion"
+            ],
+            "id": "03df9f35-725b-45d6-8762-c50b9e9f5547",
+            "source": {
+              "x": 1240,
+              "y": 400
+            },
+            "target": {
+              "cell": "05ab572e-14ee-4045-a620-91ac9d36b386",
+              "port": "640923fe-385a-499d-82e4-929b3770ad0d"
+            },
+            "vertices": [
+              {
+                "x": 1330,
+                "y": 290
+              },
+              {
+                "x": 1350,
+                "y": 270
+              }
+            ]
           },
           {
             "position": {
@@ -953,129 +980,12 @@
           },
           {
             "position": {
-              "x": 1307.5,
-              "y": 290
-            },
-            "size": {
-              "width": 112.5,
-              "height": 60
-            },
-            "attrs": {
-              "text": {
-                "text": "Pago Externo"
-              },
-              "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "actor",
-            "zIndex": 16,
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "f4a14b0a-6855-484a-9f8b-8573d47f3f28"
-                },
-                {
-                  "group": "right",
-                  "id": "5ed2ae72-f274-4394-b2ec-f493602bd1af"
-                },
-                {
-                  "group": "bottom",
-                  "id": "0d5dd37b-a4a5-4119-8121-1dde69eca1d4"
-                },
-                {
-                  "group": "left",
-                  "id": "691d9bcd-b636-4356-a85f-c232eaa6d954"
-                }
-              ]
-            },
-            "id": "81f8e3f8-7681-46c4-a2f2-e49c3f9f7775",
-            "data": {
-              "type": "tm.Actor",
-              "name": "Pago Externo",
-              "description": "",
-              "isTrustBoundary": false,
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "providesAuthentication": false,
-              "threats": []
-            }
-          },
-          {
-            "position": {
               "x": 950,
-              "y": 240
+              "y": 210
             },
             "size": {
-              "width": 180,
-              "height": 110
+              "width": 220,
+              "height": 140
             },
             "attrs": {
               "text": {
@@ -1202,7 +1112,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Login "
+                "text": "Autenticacion"
               },
               "body": {
                 "stroke": "#333333",
@@ -1298,7 +1208,7 @@
             "id": "7dc8d3f0-7663-4435-83c6-ed82f5948e38",
             "data": {
               "type": "tm.Process",
-              "name": "Login ",
+              "name": "Autenticacion",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1442,7 +1352,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Checkout"
+                "text": "Transaccion"
               },
               "body": {
                 "stroke": "#333333",
@@ -1538,7 +1448,7 @@
             "id": "b165b0b3-26a6-40dd-83f5-ba26b0a89f36",
             "data": {
               "type": "tm.Process",
-              "name": "Checkout",
+              "name": "Transaccion",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -2465,7 +2375,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Datos de autenticacion"
+                "text": "Autenticacion base de datos"
               },
               "topLine": {
                 "strokeWidth": 1.5,
@@ -2564,7 +2474,7 @@
             "id": "300b5725-8c35-438d-a2a4-43dc83d499f4",
             "data": {
               "type": "tm.Store",
-              "name": "Datos de autenticacion",
+              "name": "Autenticacion base de datos",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
