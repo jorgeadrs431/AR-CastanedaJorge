@@ -21,7 +21,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -42,12 +43,26 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "caad3ef0-25cc-420f-9a6a-0934f37e5612",
+                  "title": "Ataque de fuerza bruta",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering / Manipulación",
+                  "description": "El atacante utiliza fuerza bruta para descifrar usuarios y contraseña con el fin de adquirir datos sensibles de la victima y contraseñas \n",
+                  "mitigation": "Rate limiting (limitar intentos)\nBloqueo de cuenta\nCAPTCHA\nAutenticación multifactor (MFA) ← el verdadero asesino de fuerza bruta\nHashing fuerte (bcrypt, Argon2)\nLogs y monitoreo",
+                  "modelType": "Genérico",
+                  "new": false,
+                  "number": 20,
+                  "score": "40"
+                }
+              ],
               "trustBoundaryIds": []
             },
             "labels": [
@@ -2186,6 +2201,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Alto",
-    "threatTop": 19
+    "threatTop": 20
   }
 }
