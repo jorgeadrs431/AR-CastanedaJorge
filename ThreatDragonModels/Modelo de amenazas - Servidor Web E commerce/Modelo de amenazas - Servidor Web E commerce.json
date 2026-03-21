@@ -322,7 +322,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -343,12 +344,26 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "4c46ef3f-3696-4d07-8d1f-163fed63397d",
+                  "title": "Robo de Cookies",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Atacante intercepta sesión de cookies en HTTPS Login (MITM/XSS)",
+                  "mitigation": "Cookies HttpOnly + Secure, tokens compactos, seguros para URL y autocontenidos que se utilizan para transmitir información de forma segura entre partes como un objeto JSON",
+                  "modelType": "Genérico",
+                  "new": false,
+                  "number": 10,
+                  "score": "37"
+                }
+              ],
               "trustBoundaryIds": []
             },
             "labels": [
@@ -363,7 +378,24 @@
               "cell": "f1e46925-4654-443f-9b75-bceb63096357",
               "port": "5ed2ae72-f274-4394-b2ec-f493602bd1af"
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 780,
+                "y": 370
+              },
+              {
+                "x": 750,
+                "y": 400
+              },
+              {
+                "x": 700,
+                "y": 400
+              },
+              {
+                "x": 670,
+                "y": 370
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -2800,6 +2832,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Alto",
-    "threatTop": 9
+    "threatTop": 10
   }
 }
