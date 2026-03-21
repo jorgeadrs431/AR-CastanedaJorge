@@ -799,7 +799,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Logi",
+              "name": "Login",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -840,7 +840,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Logi"
+              "Login"
             ],
             "id": "f90535f8-9ae7-44d9-b61c-d49e44ad4bb5",
             "source": {
@@ -853,7 +853,15 @@
             },
             "vertices": [
               {
+                "x": 660,
+                "y": 430
+              },
+              {
                 "x": 730,
+                "y": 450
+              },
+              {
+                "x": 770,
                 "y": 450
               }
             ]
