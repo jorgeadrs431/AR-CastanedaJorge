@@ -152,7 +152,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "742fceef-f7f5-4c92-b918-bf8c27d43490"
+              ]
             },
             "labels": [
               "Checkout"
@@ -400,12 +402,7 @@
               "cell": "300b5725-8c35-438d-a2a4-43dc83d499f4",
               "port": "4efa058b-e399-49e1-bef1-80d154ea822e"
             },
-            "vertices": [
-              {
-                "x": 440,
-                "y": 350
-              }
-            ]
+            "vertices": []
           },
           {
             "shape": "flow",
@@ -546,7 +543,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "742fceef-f7f5-4c92-b918-bf8c27d43490"
+              ]
             },
             "labels": [
               "Requerimiento \nde base de datos\nde transaccion"
@@ -628,6 +627,87 @@
               {
                 "x": 1350,
                 "y": 270
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Zona de confianza",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "Zona de confianza"
+            ],
+            "id": "11a95a4e-1a3d-4dee-b544-60cabebc48d8",
+            "source": {
+              "x": 630,
+              "y": 70
+            },
+            "target": {
+              "x": 540,
+              "y": 670
+            },
+            "vertices": [
+              {
+                "x": 560,
+                "y": 100
+              },
+              {
+                "x": 460,
+                "y": 310
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Restriccion de red",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "dc8226a9-2474-4779-9143-fc284280f851",
+                "039c937c-a32c-4826-b9e1-0cc069e49aa2"
+              ],
+              "containedElements": [
+                "b165b0b3-26a6-40dd-83f5-ba26b0a89f36"
+              ]
+            },
+            "labels": [
+              "Restriccion de red"
+            ],
+            "id": "742fceef-f7f5-4c92-b918-bf8c27d43490",
+            "source": {
+              "x": 1208,
+              "y": 61
+            },
+            "target": {
+              "x": 1210,
+              "y": 630
+            },
+            "vertices": [
+              {
+                "x": 1230,
+                "y": 90
+              },
+              {
+                "x": 1340,
+                "y": 290
               }
             ]
           },
@@ -750,8 +830,8 @@
           },
           {
             "position": {
-              "x": 580,
-              "y": 170
+              "x": 610,
+              "y": 190
             },
             "size": {
               "width": 120,
@@ -1239,8 +1319,8 @@
                 "text": "Carrito"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1337,18 +1417,32 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "692b7f23-c86f-436b-8a20-a197b5b4777e",
+                  "title": "Precio Falsificado",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering / Manipulación",
+                  "description": "Modifica parámetros POST (precio/cantidad) antes del servidor",
+                  "mitigation": "Server-side validation, hash integridad.\nLa validación del lado del servidor (server-side validation) combinada con el hash de integridad garantiza que los datos recibidos no hayan sido manipulados durante la transmisión.",
+                  "modelType": "Genérico",
+                  "new": false,
+                  "number": 11,
+                  "score": "42"
+                }
+              ]
             }
           },
           {
             "position": {
-              "x": 1208,
-              "y": 400
+              "x": 1238,
+              "y": 380
             },
             "size": {
               "width": 60,
@@ -2370,8 +2464,8 @@
           },
           {
             "position": {
-              "x": 242,
-              "y": 310
+              "x": 200,
+              "y": 320
             },
             "size": {
               "width": 150,
@@ -2746,6 +2840,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Alto",
-    "threatTop": 10
+    "threatTop": 11
   }
 }
