@@ -125,7 +125,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -146,12 +147,26 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "aa089aec-bbad-46dc-a756-1cfd4d9ac6be",
+                  "title": "Sin Logs Compra",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation / Repudiación",
+                  "description": "Usuario niega checkout (sin auditoría/timestamps)",
+                  "mitigation": "Audit logs, timestamps, firma digital.\nLa combinación de firma digital, timestamps (sellos de tiempo) y audit logs (registros de auditoría) garantiza la integridad, autenticidad y no repudio de documentos electrónicos",
+                  "modelType": "Genérico",
+                  "new": false,
+                  "number": 12,
+                  "score": "29"
+                }
+              ],
               "trustBoundaryIds": [
                 "742fceef-f7f5-4c92-b918-bf8c27d43490"
               ]
@@ -168,13 +183,27 @@
               "cell": "b165b0b3-26a6-40dd-83f5-ba26b0a89f36",
               "port": "f1f21f6c-8308-49d4-9b58-06db99ed1cab"
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 1150,
+                "y": 350
+              },
+              {
+                "x": 1180,
+                "y": 370
+              },
+              {
+                "x": 1230,
+                "y": 370
+              }
+            ]
           },
           {
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -195,12 +224,26 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "16a93b88-7aad-40d2-bce6-fe02f57a2b3c",
+                  "title": "XSS Admin",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "--- STRIDE ---",
+                  "description": "Script malicioso en Admin Panel eleva privilegios",
+                  "mitigation": "Output encoding, CSP, validation.\nLa validación actúa como el \"guardián\" de la aplicación, examinando minuciosamente todos los datos proporcionados por el usuario para garantizar que cumplan con especificaciones estrictas antes de ser procesados ​​o almacenados.",
+                  "modelType": "Genérico",
+                  "new": false,
+                  "number": 15,
+                  "score": "46"
+                }
+              ],
               "trustBoundaryIds": []
             },
             "labels": [
@@ -218,6 +261,10 @@
             "vertices": [
               {
                 "x": 740,
+                "y": 295
+              },
+              {
+                "x": 850,
                 "y": 295
               }
             ]
@@ -344,12 +391,12 @@
                 "y": 370
               },
               {
-                "x": 750,
-                "y": 400
+                "x": 730,
+                "y": 350
               },
               {
                 "x": 700,
-                "y": 400
+                "y": 350
               },
               {
                 "x": 670,
@@ -712,6 +759,86 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Logi",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "a7ee6d71-1615-45cd-9d0d-84c19844f9a3",
+                  "title": "SQL Injection",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Information disclosure / Brecha de información",
+                  "description": "Input malicioso en Login expone base datos",
+                  "mitigation": "Prepared statements, input sanitization.\nLas sentencias preparadas (consultas parametrizadas) son la principal defensa contra la inyección SQL, ya que separan el código SQL de los datos del usuario para garantizar que la entrada se trate como datos y no como código ejecutable.",
+                  "modelType": "Genérico",
+                  "new": false,
+                  "number": 13,
+                  "score": "46"
+                },
+                {
+                  "id": "cff619cd-1840-4974-bafb-8a924368feba",
+                  "title": "XSS Admin",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Elevation of privilege / Elevación de privilegios",
+                  "description": "Script malicioso en Admin Panel eleva privilegios",
+                  "mitigation": "Output encoding, CSP, validation.\nLa validación actúa como el \"guardián\" de la aplicación, examinando minuciosamente todos los datos proporcionados por el usuario para garantizar que cumplan con especificaciones estrictas antes de ser procesados ​​o almacenados.",
+                  "modelType": "Genérico",
+                  "new": false,
+                  "number": 14,
+                  "score": "46"
+                }
+              ],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Logi"
+            ],
+            "id": "f90535f8-9ae7-44d9-b61c-d49e44ad4bb5",
+            "source": {
+              "x": 571,
+              "y": 380
+            },
+            "target": {
+              "cell": "7dc8d3f0-7663-4435-83c6-ed82f5948e38",
+              "port": "b8a05a14-1e6f-4aed-b003-bc3298c3673f"
+            },
+            "vertices": [
+              {
+                "x": 730,
+                "y": 450
+              }
+            ]
+          },
+          {
             "position": {
               "x": 520,
               "y": 320
@@ -725,8 +852,8 @@
                 "text": "Usuario / Cliente"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -823,9 +950,23 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "e39906b9-b7da-4aac-8687-2aa8210d0e0f",
+                  "title": "Phishing Login",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Página falsa captura credenciales usuario",
+                  "mitigation": "DNSSEC, user training, 2FA.\n(2FA) constituyen una sólida estrategia de defensa en profundidad que protege la infraestructura, el personal y los puntos de acceso.",
+                  "modelType": "Genérico",
+                  "new": false,
+                  "number": 16,
+                  "score": "33"
+                }
+              ]
             }
           },
           {
@@ -2840,6 +2981,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Alto",
-    "threatTop": 11
+    "threatTop": 16
   }
 }
