@@ -1063,8 +1063,8 @@
                 "text": "Administrador"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1161,9 +1161,23 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "10dd0bb6-261d-4a73-ba69-1c437362820a",
+                  "title": "Toma de control de la cuenta de administrador",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Atacante aprovecha tokens de reset de contraseña predecibles o débiles \n(enumerables: reset_token=1,2,3...) para tomar control total de cuenta admin.\nAcceso completo a gestión usuarios, precios, órdenes.\n",
+                  "mitigation": " • Tokens cryptográficamente seguros \n• Rate limit: 1 reset/IP/hora\n• Email + SMS 2FA para admin resets\n• CAPTCHA en password reset\n• Expiración tokens: 15 minutos",
+                  "modelType": "Genérico",
+                  "new": false,
+                  "number": 19,
+                  "score": "50"
+                }
+              ]
             }
           },
           {
@@ -1674,8 +1688,8 @@
                 "text": "Transaccion"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1772,12 +1786,26 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": true,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "c7dda025-eec9-4587-bb94-516c7a9d3f95",
+                  "title": "Filtración de detalles de la tarjeta",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Information disclosure / Brecha de información",
+                  "description": "Registros expuestos de CVV de la tarjeta de credito, Nombres, y Numero de tarjeta. ",
+                  "mitigation": " **Tokenización de datos de pago**\n   - NUNCA loguear PAN, CVV, expiry\n   - Usar gateway (Stripe/PayPal) → tokeniza AL INSTANTE\n   - Logs solo: \"payment_token_abc123 OK\"",
+                  "modelType": "Genérico",
+                  "new": false,
+                  "number": 18,
+                  "score": "45"
+                }
+              ]
             }
           },
           {
@@ -2158,6 +2186,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Alto",
-    "threatTop": 17
+    "threatTop": 19
   }
 }
