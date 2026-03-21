@@ -449,13 +449,19 @@
               "cell": "300b5725-8c35-438d-a2a4-43dc83d499f4",
               "port": "4efa058b-e399-49e1-bef1-80d154ea822e"
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 400,
+                "y": 400
+              }
+            ]
           },
           {
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -471,21 +477,35 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Ataque",
+              "name": "Impacto",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "37ac2599-9616-4974-ae62-0c122161b1e8",
+                  "title": "Headers Leak",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure / Brecha de información",
+                  "description": "Server/version info expuesto en headers",
+                  "mitigation": "La implementación de cabeceras de seguridad HTTP junto con ofuscación del servidor funciona como un control preventivo orientado a mitigar amenazas en la capa de aplicación web (capa 7 del modelo OSI).",
+                  "modelType": "Genérico",
+                  "new": false,
+                  "number": 17,
+                  "score": "30"
+                }
+              ],
               "trustBoundaryIds": []
             },
             "labels": [
-              "Ataque"
+              "Impacto"
             ],
             "id": "bb440f5c-f926-4dec-95ab-6c9d837eebda",
             "source": {
@@ -835,6 +855,58 @@
               {
                 "x": 730,
                 "y": 450
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Request \nBase de datos",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Request \nBase de datos"
+            ],
+            "id": "391b2c87-c10c-497d-993c-8047a14c029e",
+            "source": {
+              "x": 290,
+              "y": 560
+            },
+            "target": {
+              "cell": "14779aed-4a05-4be2-ba91-178e66948b70",
+              "port": "0d5dd37b-a4a5-4119-8121-1dde69eca1d4"
+            },
+            "vertices": [
+              {
+                "x": 430,
+                "y": 640
               }
             ]
           },
@@ -1318,7 +1390,7 @@
               "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
-              "isWebApplication": false,
+              "isWebApplication": true,
               "privilegeLevel": "",
               "threats": []
             },
@@ -2605,8 +2677,8 @@
           },
           {
             "position": {
-              "x": 200,
-              "y": 320
+              "x": 100,
+              "y": 370
             },
             "size": {
               "width": 150,
@@ -2738,7 +2810,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Robo de informacion"
+                "text": "Base de datos\n informacion"
               },
               "topLine": {
                 "strokeWidth": 1.5,
@@ -2837,7 +2909,7 @@
             "id": "ac157b6d-843d-4e9e-9e61-1a1a5f1bbf94",
             "data": {
               "type": "tm.Store",
-              "name": "Robo de informacion",
+              "name": "Base de datos\n informacion",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -2981,6 +3053,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Alto",
-    "threatTop": 16
+    "threatTop": 17
   }
 }
